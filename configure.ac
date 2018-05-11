@@ -30,7 +30,8 @@ AC_PROG_CC()
 # check for specific header (.h) files that we are interested in
 AC_CHECK_HEADERS([fcntl.h limits.h sys/types.h sys/stat.h time.h])
 
-AC_CHECK_FUNCS([utimensat])
+# Removed to support building for macOS 10.12 on 10.13
+#AC_CHECK_FUNCS([utimensat])
 AC_CHECK_FUNCS([GetFinalPathNameByHandleW])
 
 # EXTEXT is defined automatically by AC_PROG_CC;
